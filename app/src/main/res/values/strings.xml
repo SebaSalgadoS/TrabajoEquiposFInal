@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">App Equipos TrabajoFinal</string>
+    <string name="cabecera_del_usuario">Cabecera del usuario</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="drawer_open">Drawer Open</string>
+    <string name="drawer_close">Drawer Close</string>
+</resources>
