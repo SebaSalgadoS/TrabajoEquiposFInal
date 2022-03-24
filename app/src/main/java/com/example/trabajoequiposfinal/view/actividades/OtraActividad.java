@@ -26,6 +26,7 @@ import android.os.Environment;
 import android.provider.MediaStore;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -103,6 +104,9 @@ public class OtraActividad extends AppCompatActivity implements NavigationView.O
         cabecera = header.findViewById(R.id.txtNombreCabecera);
         cabecera.setText(nombre);
 
+        this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+
+
     }
 
     @Override
@@ -145,6 +149,10 @@ public class OtraActividad extends AppCompatActivity implements NavigationView.O
             case R.id.nav_eliminar:
                 ft.replace(R.id.myFrame, new FragEliminarEquipo()).commit();
                 break;
+            case R.id.nav_salir:
+                Intent intent = new Intent(getApplicationContext(), Login.class);
+                startActivity(intent);
+
         }
         setTitle(item.getTitle()); //para mostrar el título
         myDrawer.closeDrawers(); //para cerrar drawer

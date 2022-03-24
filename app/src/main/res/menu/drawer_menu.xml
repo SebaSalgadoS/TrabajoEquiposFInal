@@ -3,7 +3,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
 
-    -<group android:checkableBehavior="single">
+    <group android:checkableBehavior="single">
 
     <item
         android:title="Registrar Equipo"
@@ -21,6 +21,15 @@
         android:icon="@drawable/ic_eliminar"
         android:id="@+id/nav_eliminar"/>
 
-</group>
+    </group>
+    <group>
+
+        <item
+            android:id="@+id/nav_salir"
+            android:title="Salir"
+            android:icon="@drawable/ic_salir"/>
+
+    </group>
+
 
 </menu>

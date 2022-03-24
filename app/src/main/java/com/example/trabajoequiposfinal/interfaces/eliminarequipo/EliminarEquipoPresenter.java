@@ -1,9 +1,12 @@
 package com.example.trabajoequiposfinal.interfaces.eliminarequipo;
 
+import android.content.Context;
+
 public interface EliminarEquipoPresenter {
 
-    void eliminarEquipo();
-    void exito();
+    void eliminarEquipo(String codigo, Context context);
+    void exitoEliminar();
     void error();
+    void errorCodigo();
 
 }

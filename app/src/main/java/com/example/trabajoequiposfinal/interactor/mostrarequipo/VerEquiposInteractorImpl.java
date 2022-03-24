@@ -81,7 +81,7 @@ public class VerEquiposInteractorImpl implements VerEquipoInteractor {
                         }
                     }
                     listaRegistros.add(new RegistroEquiposDatos(archivos.get(0),archivos.get(1),"Codigo: "+codigo,"Marca: "+marca,"Modelo: "+modelo,"Fecha: "+fecha,
-                            "Equipo: "+equipo,"Cargador: "+cargador,"Manual: "+manual, "Garantia: "+garantia,"Equipo/SistemasebOP: "+equipoSo,
+                            "Equipo: "+equipo,"Cargador: "+cargador,"Manual: "+manual, "Garantia: "+garantia,"Equipo/SystemOP: "+equipoSo,
                             "Monitor: "+monitor, "Audio: "+audio,"Touchpad: "+touchpad,"Observaciones: "+observaciones));
                 }
                 else{

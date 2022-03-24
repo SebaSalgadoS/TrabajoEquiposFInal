@@ -38,10 +38,13 @@ public class Registro extends AppCompatActivity implements RegistroView {
 
         presentador = new RegistroPresenterImpl(this);
 
-        //intento de codigo para boton retroceder del toolbar
-        //setSupportActionBar(myToolbarLogin);
-        //getSupportActionBar().setTitle("Registro Usuario");
-        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        //getSupportActionBar(myToolbarLogin).setDisplayHomeAsUpEnabled(true);
+    }
+
+    @Override
+    public boolean onSupportNavigateUp(){
+        onBackPressed();
+        return super.onSupportNavigateUp();
     }
 
     public void registro(View view){
