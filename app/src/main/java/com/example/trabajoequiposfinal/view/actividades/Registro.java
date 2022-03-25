@@ -1,13 +1,19 @@
 package com.example.trabajoequiposfinal.view.actividades;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-import android.widget.Toolbar;
+
 
 import com.example.trabajoequiposfinal.R;
 import com.example.trabajoequiposfinal.interfaces.registrouser.RegistroPresenter;
@@ -20,7 +26,6 @@ public class Registro extends AppCompatActivity implements RegistroView {
     EditText txtNombre, txtUser2, txtPass2;
     Button btnRegistrar;
 
-    Toolbar myToolbarLogin;
 
     RegistroPresenter presentador;
 
@@ -34,18 +39,16 @@ public class Registro extends AppCompatActivity implements RegistroView {
         txtPass2 = findViewById(R.id.txtPass2);
         btnRegistrar = findViewById(R.id.btnRegistrar);
 
-        myToolbarLogin = findViewById(R.id.myToolbarLogin);
+
 
         presentador = new RegistroPresenterImpl(this);
-
-        //getSupportActionBar(myToolbarLogin).setDisplayHomeAsUpEnabled(true);
+        //getSupportActionBar(myToolbarLogin);
     }
 
-    @Override
-    public boolean onSupportNavigateUp(){
-        onBackPressed();
-        return super.onSupportNavigateUp();
-    }
+
+
+
+
 
     public void registro(View view){
         presentador.registrar(txtNombre.getText().toString(),
@@ -77,4 +80,6 @@ public class Registro extends AppCompatActivity implements RegistroView {
     public void setErrorPassword() {
         txtPass2.setError("Complete el campo");
     }
+
+
 }

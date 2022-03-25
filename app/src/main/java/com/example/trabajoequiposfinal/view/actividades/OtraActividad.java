@@ -153,6 +153,7 @@ public class OtraActividad extends AppCompatActivity implements NavigationView.O
                 Intent intent = new Intent(getApplicationContext(), Login.class);
                 startActivity(intent);
 
+
         }
         setTitle(item.getTitle()); //para mostrar el título
         myDrawer.closeDrawers(); //para cerrar drawer
